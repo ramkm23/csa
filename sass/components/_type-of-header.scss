@@ -1,0 +1,17 @@
+#top-nav-menu-container {
+    float: right;
+}
+
+@media(max-width:768px)
+{
+    .desktop-version, .full-with-hirizontal-menu {
+        display:none !important  
+    }
+}
+
+
+.full-with-hirizontal-menu {
+    a {
+        color: white !important;
+    }
+}
