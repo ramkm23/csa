@@ -24,12 +24,50 @@ jQuery(document).ready(function ($) {
   // Intro background carousel
   $("#intro-carousel").owlCarousel({
     autoplay: true,
-    dots: false,
+    dots: true,
     loop: true,
     animateOut: 'fadeOut',
     items: 1
   });
+// Hero Slider Controls
+var introCarousel = $("#intro-carousel");
+var totalSlides = $("#intro-carousel .owl-item:not(.cloned)").length;
 
+// Create dots
+for (var i = 0; i < totalSlides; i++) {
+  $(".hero-dots").append(
+    '<button class="hero-dot" data-slide="' + i + '"></button>'
+  );
+}
+
+$(".hero-dot").first().addClass("active");
+
+// Previous
+$(".hero-prev").click(function () {
+  introCarousel.trigger("prev.owl.carousel");
+});
+
+// Next
+$(".hero-next").click(function () {
+  introCarousel.trigger("next.owl.carousel");
+});
+
+// Dot click
+$(".hero-dot").click(function () {
+  var index = $(this).data("slide");
+  introCarousel.trigger("to.owl.carousel", [index, 300]);
+});
+
+// Active dot
+introCarousel.on("changed.owl.carousel", function (event) {
+  var index = event.item.index - event.relatedTarget._clones.length / 2;
+  var count = event.item.count;
+
+  index = ((index % count) + count) % count;
+
+  $(".hero-dot").removeClass("active");
+  $(".hero-dot").eq(index).addClass("active");
+});
   // Initiate the wowjs animation library
   new WOW().init();
 

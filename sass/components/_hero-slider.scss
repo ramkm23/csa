@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+# Hero Slider
+--------------------------------------------------------------*/
+
+#hero-slider {
+  position: relative;
+  width: 100%;
+  height: 87vh;
+  margin-top: -87vh;
+  z-index: 20;
+  pointer-events: none;
+
+  .hero-slider-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    //width: 100%;
+    padding:-40px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    transform: translateY(-120px);
+  }
+
+  .hero-slider-banner-content {
+    //max-width: 650px;
+    padding: 35px 45px;
+    background: rgba(0, 0, 0, 0.55);
+    border-right: 5px solid $primary;
+    pointer-events: auto;
+
+    h1 {
+      color: $web-white;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: $web-white;
+    }
+  }
+
+  .hero-prev,
+  .hero-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    z-index: 20;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .hero-prev {
+    left: 20px;
+  }
+
+  .hero-next {
+    right: 20px;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    pointer-events: auto;
+
+    .hero-dot {
+      width: 10px;
+      height: 10px;
+      margin: 5px;
+      padding: 0;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background: transparent;
+
+      &.active {
+        background: $primary;
+      }
+    }
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  #hero-slider {
+    .hero-slider-content {
+      padding: 20px;
+      transform: translateY(-30px);
+    }
+
+    .hero-slider-banner-content {
+      max-width: 100%;
+      padding: 20px;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .hero-prev {
+      left: 10px;
+    }
+
+    .hero-next {
+      right: 10px;
+    }
+  }
+}
