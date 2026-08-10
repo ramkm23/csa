@@ -2317,6 +2317,153 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6a783ef437fa7": {
+                    "key": "layout_6a783ef437fa7",
+                    "name": "hero-slider",
+                    "label": "Hero Slider",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a783ef437fa8",
+                            "label": "Include hero slider",
+                            "name": "include-hero-slider",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Yes": "Yes",
+                                "No": "No"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_6a783ef437fa9",
+                            "label": "Heading",
+                            "name": "hero-slider-heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6a783ef437faa",
+                            "label": "Text",
+                            "name": "hero-slider-text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6a783ef437fab",
+                            "label": "Primary button",
+                            "name": "hero-slider-primary-button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_6a783ef437fac",
+                            "label": "Secondary button",
+                            "name": "hero-slider-secondary-button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_6a783ef437fad",
+                            "label": "Background image",
+                            "name": "background-slider-image",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add clients testimonials",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a783ef437fae",
+                                    "label": "Image",
+                                    "name": "Backgrond-slider-image",
+                                    "type": "image",
+                                    "instructions": "images should be 1440x520",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "full",
+                                    "library": "all",
+                                    "min_width": 1440,
+                                    "min_height": 520,
+                                    "min_size": "",
+                                    "max_width": 1440,
+                                    "max_height": 520,
+                                    "max_size": "",
+                                    "mime_types": ",jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_670f89c9ee806": {
                     "key": "layout_670f89c9ee806",
                     "name": "text-cta-box",
@@ -2593,5 +2740,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1780762171
+    "modified": 1786265639
 }
