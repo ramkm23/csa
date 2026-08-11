@@ -24,11 +24,24 @@ jQuery(document).ready(function ($) {
   // Intro background carousel
   $("#intro-carousel").owlCarousel({
     autoplay: true,
-    dots: false,
+    dots: true,
     loop: true,
     animateOut: 'fadeOut',
     items: 1
   });
+  //hero block
+  $("#hero-carousel").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    loop: true,
+    dots: true,
+    nav: true,
+    items: 1,
+    animateOut: "fadeOut",
+    navText: ["&#10094;", "&#10095;"]
+});
+
+
 
   // Initiate the wowjs animation library
   new WOW().init();
