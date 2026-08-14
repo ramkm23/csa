@@ -1,0 +1,210 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+#hero {
+    width: 100%;
+    height: 87vh;
+    position: relative;
+    overflow: hidden;
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 180px);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+
+        .hero-banner-content {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.65);
+            border-right: 5px solid $primary;
+            padding: 35px 45px;
+            margin-bottom: 23px;
+            border-radius: 5px;
+            pointer-events: auto;
+            width: auto;
+            max-width: none;
+        }
+
+        h1 {
+            color: $web-white;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            color: $web-white;
+        }
+
+        .btn-get-started,
+        .btn-projects {
+            font-family: "Raleway", sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 32px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.5s;
+            color: #fff;
+            pointer-events: auto;
+        }
+
+        .btn-get-started {
+            background: $primary;
+            border: 2px solid $web-white;
+
+            &:hover {
+                background: $secondary;
+            }
+        }
+
+        .btn-projects {
+            background: $secondary;
+            border: 2px solid $web-white;
+
+            &:hover {
+                background: $primary;
+            }
+        }
+    }
+
+    #hero-carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 8;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.42);
+            z-index: 7;
+            pointer-events: none;
+        }
+
+        .owl-stage-outer,
+        .owl-stage,
+        .owl-item,
+        .item {
+            height: 100%;
+        }
+
+        .item {
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            z-index: 30;
+
+            .owl-dot span {
+                display: block;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                background: transparent;
+            }
+
+            .owl-dot.active span {
+                background: #fff;
+            }
+        }
+    }
+
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 25px;
+            z-index: 30;
+        }
+
+        .owl-prev { left: 20px; }
+        .owl-next { right: 20px; }
+    }
+}
+
+//@ MOBILE RESPONSIVE 
+@media (max-width: 767px) {
+    #hero {
+        height: auto;
+        min-height: 60vh;
+
+        .hero-content {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            width: 100%;
+            min-height: 60vh;
+            transform: none;
+            justify-content: center;
+            align-items: stretch;
+            padding: 40px 55px;
+            z-index: 10;
+
+            .hero-banner-content {
+                width: auto;
+                max-width: none;
+                margin: 0;
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        #hero-carousel {
+            height: 100%;
+
+            .owl-dots {
+                bottom: 15px;
+            }
+        }
+
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+            }
+
+            .owl-prev { left: 10px; }
+            .owl-next { right: 10px; }
+        }
+    }
+}

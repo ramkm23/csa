@@ -21,14 +21,24 @@ jQuery(document).ready(function ($) {
     zIndex: '50'
   });
 
+  // Common Owl Carousel configuration
+  var commonCarouselConfig = {
+  autoplay: true,
+  dots: true,
+  loop: true,
+  animateOut: 'fadeOut',
+  items: 1
+  };
+
   // Intro background carousel
-  $("#intro-carousel").owlCarousel({
-    autoplay: true,
-    dots: false,
-    loop: true,
-    animateOut: 'fadeOut',
-    items: 1
-  });
+  $("#intro-carousel").owlCarousel(commonCarouselConfig);
+
+  // Hero carousel
+  $("#hero-carousel").owlCarousel($.extend({}, commonCarouselConfig, {
+  autoplayTimeout: 5000,
+  nav: true,
+  navText: ["&#10094;", "&#10095;"]
+  }));
 
   // Initiate the wowjs animation library
   new WOW().init();
